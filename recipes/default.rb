@@ -9,7 +9,7 @@ include_recipe "java"
 archive_directory = Chef::Config[:file_cache_path]
 zip_name = "TeamCity-BuildAgent-#{node["teamcity_build_agent"]["version"]}.zip"
 zip_dest = "#{archive_directory}/#{zip_name}"
-zip_source = node['teamcity_build_agent']['address'] + "/update/buildAgent.zip"
+zip_source = node['teamcity_build_agent']['server_url'] + "/update/buildAgent.zip"
 install_dir = "/opt/teamcity/buildAgent"
 
 # Download the build agent from the teamcity server
@@ -47,7 +47,7 @@ end
 bash "install-buildAgent" do
   cwd install_dir + "/bin"
   code <<-EOH
-    ./install.sh #{node['teamcity_build_agent']['address']}
+    ./install.sh #{node['teamcity_build_agent']['server_url']}
   EOH
 end
 
