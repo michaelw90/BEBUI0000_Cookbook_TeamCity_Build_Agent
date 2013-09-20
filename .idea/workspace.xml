@@ -30,7 +30,11 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/Vagrantfile" changelist="64dc50e4-f19c-478f-b4d8-475291b292e3" time="1379711043633" ignored="false" />
     <file path="/metadata.rb" changelist="64dc50e4-f19c-478f-b4d8-475291b292e3" time="1379710322471" ignored="false" />
-    <file path="/default.rb" changelist="64dc50e4-f19c-478f-b4d8-475291b292e3" time="1379710949535" ignored="false" />
+    <file path="/default.rb" changelist="64dc50e4-f19c-478f-b4d8-475291b292e3" time="1379711719582" ignored="false" />
+    <file path="$PROJECT_DIR$/../BEBUI0000_Cookbook_JetBrains/templates/default/server.xml.erb" changelist="64dc50e4-f19c-478f-b4d8-475291b292e3" time="1379712611660" ignored="false" />
+    <file path="/server.xml.erb" changelist="64dc50e4-f19c-478f-b4d8-475291b292e3" time="1379712570928" ignored="false" />
+    <file path="/Dummy.txt" changelist="64dc50e4-f19c-478f-b4d8-475291b292e3" time="1379712842705" ignored="false" />
+    <file path="$PROJECT_DIR$/../BEBUI0000_Cookbook_JetBrains/Vagrantfile" changelist="64dc50e4-f19c-478f-b4d8-475291b292e3" time="1379712942891" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +94,26 @@
     <favorites_list name="BEBUI0000_Cookbook_TeamCity_Build_Agent" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="Vagrantfile" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Vagrantfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="44" selection-start="1538" selection-end="1538" vertical-scroll-proportion="0.43087557">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="default.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/recipes/default.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="39" selection-start="358" selection-end="382" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -102,9 +125,9 @@
       <list>
         <option value="$PROJECT_DIR$/metadata.rb" />
         <option value="$PROJECT_DIR$/Berksfile" />
-        <option value="$PROJECT_DIR$/Vagrantfile" />
         <option value="$PROJECT_DIR$/attributes/default.rb" />
         <option value="$PROJECT_DIR$/recipes/default.rb" />
+        <option value="$PROJECT_DIR$/Vagrantfile" />
       </list>
     </option>
   </component>
@@ -272,7 +295,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -292,7 +315,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2497332" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2497332" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -399,14 +422,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/recipes/default.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="53" selection-start="340" selection-end="340" vertical-scroll-proportion="0.21845794">
+        <state line="13" column="39" selection-start="358" selection-end="382" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Vagrantfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="17" selection-start="1499" selection-end="1509" vertical-scroll-proportion="0.43087557">
+        <state line="22" column="44" selection-start="1538" selection-end="1538" vertical-scroll-proportion="0.43087557">
           <folding />
         </state>
       </provider>

@@ -5,9 +5,10 @@
 
 include_recipe "appbox"
 include_recipe "java"
+package "unzip"
 
 archive_directory = Chef::Config[:file_cache_path]
-zip_name = "TeamCity-BuildAgent-#{node["teamcity_build_agent"]["version"]}.zip"
+zip_name = "TeamCity-BuildAgent.zip"
 zip_dest = "#{archive_directory}/#{zip_name}"
 zip_source = node['teamcity_build_agent']['server_url'] + "/update/buildAgent.zip"
 install_dir = "/opt/teamcity/buildAgent"
