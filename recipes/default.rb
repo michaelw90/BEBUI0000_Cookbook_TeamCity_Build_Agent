@@ -72,15 +72,3 @@ end
 file zip_dest do
   action :delete
 end
-
-directory "/root/.ssh" do
-  mode "0700"
-  action :create
-end
-
-remote_file "/root/.ssh/id_rsa" do
-  backup false
-  source "file:///ssh/id_rsa"
-  mode "0700"
-  action :create
-end
