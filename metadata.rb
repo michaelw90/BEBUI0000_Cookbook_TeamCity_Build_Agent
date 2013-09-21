@@ -4,7 +4,7 @@ maintainer_email 'fred.thompson@buildempire.co.uk'
 license          'Apache 2.0'
 description      'TeamCity Build Agent.'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '0.0.3'
+version          '0.0.4'
 
 recipe 'teamcity_build_agent', 'TeamCity Build Agent.'
 
