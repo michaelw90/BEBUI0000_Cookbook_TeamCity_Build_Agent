@@ -12,11 +12,9 @@ zip_name = "TeamCity-BuildAgent.zip"
 zip_dest = "#{archive_directory}/#{zip_name}"
 zip_source = node['teamcity_build_agent']['server_url'] + "/update/buildAgent.zip"
 install_dir = "/opt/teamcity/buildAgent"
-user = "deploy"
 
 # Download the build agent from the teamcity server
 remote_file zip_dest do
-  owner user
   source zip_source
   action :create_if_missing
 end
@@ -29,14 +27,12 @@ end
 
 # Create the installation directory
 directory install_dir do
-  owner user
   mode "0755"
   action :create
 end
 
 # Unzip the build agent into the installation directory
 bash "unzip-buildAgent" do
-  user user
   code <<-EOH
     unzip #{zip_dest} -d #{install_dir}
   EOH
@@ -50,7 +46,6 @@ end
 
 # Run the installation
 bash "install-buildAgent" do
-  user user
   cwd install_dir + "/bin"
   code <<-EOH
     ./install.sh #{node['teamcity_build_agent']['server_url']}
@@ -65,7 +60,6 @@ end
 
 # Ensure the agent is running
 bash "ensure-buildAgent-running" do
-  user user
   not_if "pgrep -f buildServer.agent.Launcher"
   cwd install_dir + "/bin"
   code <<-EOH
