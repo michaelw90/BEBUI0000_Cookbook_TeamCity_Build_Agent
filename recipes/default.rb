@@ -62,17 +62,9 @@ file install_dir + "/bin/agent.sh" do
   mode 00755
 end
 
-# Ensure the agent is running
-bash "ensure-buildAgent-running" do
-  not_if "pgrep -f buildServer.agent.Launcher"
-  cwd install_dir + "/bin"
-  code <<-EOH
-    export JRE_HOME=/usr
-    ./agent.sh start
-  EOH
-end
-
 # Remove the installation zip
 file zip_dest do
   action :delete
 end
+
+include_recipe 'cookbook_teamcity_build_agent::service'
