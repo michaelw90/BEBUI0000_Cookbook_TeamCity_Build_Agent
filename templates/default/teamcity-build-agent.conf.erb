@@ -11,26 +11,8 @@ kill timeout 30
 
 respawn
 
-pre-start script
-
-  [ ! -f /etc/default/TeamCity ] && { stop; exit 0; }
-
-  . /etc/default/TeamCity
-
-  [ "$TEAMCITY_AGENT_ENABLED" != "yes" ] && { stop; exit 0; }
-
-  [ ! -f "<%= @agent_path %>/bin/agent.sh" ] && { stop; exit 0; }
-
-  exit 0
-end script
-
 script
-  . /etc/default/TeamCity
 
-  export TEAMCITY_AGENT_MEM_OPTS
-  export TEAMCITY_AGENT_OPTS
-  export CONFIG_FILE="${TEAMCITY_AGENT_CONFIG_FILE}"
-  export LOG_DIR="${TEAMCITY_AGENT_LOG_DIR}"
   export JRE_HOME=/usr
 
   exec start-stop-daemon --start -c www-data --exec "<%= @agent_path %>/bin/agent.sh" -- run
