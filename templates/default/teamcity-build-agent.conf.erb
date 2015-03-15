@@ -15,6 +15,6 @@ script
 
   export JRE_HOME=/usr
 
-  exec start-stop-daemon --start -c www-data --exec "<%= @agent_path %>/bin/agent.sh" -- run
+  exec start-stop-daemon --start -c root --exec "<%= @agent_path %>/bin/agent.sh" -- run
 
 end script
