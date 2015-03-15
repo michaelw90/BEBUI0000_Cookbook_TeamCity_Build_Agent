@@ -67,4 +67,4 @@ file zip_dest do
   action :delete
 end
 
-include_recipe 'cookbook_teamcity_build_agent::service'
+include_recipe 'teamcity_build_agent::service'
