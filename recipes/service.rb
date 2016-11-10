@@ -11,7 +11,7 @@ if node[:teamcity_build_agent][:systemd]
   systemd_unit "teamcity-build-agent.service" do
     enabled true
     active true
-    content "[Unit]\nDescription=TeamCity Build Agent\nAfter=network.target\n\n[Service]\nType=forking\nPIDFile=" + agent_path + "/logs/buildAgent.pid\nExecStart=/usr/bin/sudo -u teamcity " + agent_path + "/bin/agent.sh start\nExecStop=/usr/bin/sudo -u teamcity " + agent_path + "/bin/agent.sh stop\n\nRestart=always\n[Install]\nWantedBy=multi-user.target"
+    content "[Unit]\nDescription=TeamCity Build Agent\nAfter=network.target\n\n[Service]\nType=forking\nPIDFile=" + agent_path + "/logs/buildAgent.pid\nExecStart=/usr/bin/sudo " + agent_path + "/bin/agent.sh start\nExecStop=/usr/bin/sudo " + agent_path + "/bin/agent.sh stop\n\nRestart=always\n[Install]\nWantedBy=multi-user.target"
     action [:create, :enable, :start]
   end
 else
