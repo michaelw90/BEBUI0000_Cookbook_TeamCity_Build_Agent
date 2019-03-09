@@ -32,6 +32,7 @@ end
 directory install_dir do
   mode "0755"
   action :create
+  recursive true
 end
 
 # Unzip the build agent into the installation directory
