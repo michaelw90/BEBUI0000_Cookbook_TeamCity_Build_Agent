@@ -2,13 +2,8 @@
 # Cookbook Name:: teamcity_build_agent
 # Recipe:: default
 #
-
-include_recipe "appbox"
 include_recipe "java"
 package "unzip"
-package "libsqlite3-dev"
-package "libmysqlclient-dev"
-package "mysql-client"
 
 archive_directory = Chef::Config[:file_cache_path]
 zip_name = "TeamCity-BuildAgent.zip"
